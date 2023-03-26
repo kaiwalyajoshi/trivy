@@ -35,6 +35,10 @@ func Run(ctx context.Context, args []string, opts flag.Options) error {
 		return xerrors.Errorf("failed getting k8s cluster: %w", err)
 	}
 
+	// DELETEME@kjoshi: Remove this!
+	log.Logger.Infof("DELETEME@kjoshi Running Modified version of Trivy")
+	// DELETEME@kjoshi: End of Remove this!
+
 	switch args[0] {
 	case clusterArtifact:
 		return clusterRun(ctx, opts, cluster)
